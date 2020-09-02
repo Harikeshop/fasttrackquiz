@@ -1,23 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@1,700&display=swap" rel="stylesheet">
+
     <style>
+      @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@1,700&display=swap');
+
         #main{
 			height: 750px;
-			background: url("https://images.unsplash.com/photo-1564801720666-83b2d7a3de73?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80");
+			background: url();
 
 			background-size: 300px;
             margin: auto;
   			width: 90%;
   			border: 3px solid green;
   			padding: 10px;
+        background: url('https://images.unsplash.com/photo-1474540412665-1cdae210ae6b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80');
 		}
+
+    #head{
+      width: 100%;
+      height: auto;
+      
+    }
+
+    #head h1{
+      text-align: center;
+      font-size: 50px;
+    }
+
+    #main input{
+      width: 90%;
+      padding: 10px;
+      font-family: 'Balsamiq Sans', cursive;
+      font-size: 20px;
+      color: white;
+      background: none;
+      margin-top: 10px;
+      margin-bottom: 10px;
+
+    }
+
+        #main button{
+      width: 90%;
+      padding: 10px;
+      font-family: 'Balsamiq Sans', cursive;
+      font-size: 20px;
+      color: white;
+      background: none;
+      margin-top: 10px;
+      margin-bottom: 10px;
+
+    }
+
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+
+
+
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
 </head>
 <body>
+
+
+    <div id="main">
+    <div id="head">
+        <h1>Register</h1>
+    </div>
+
+    <script type="text/javascript">var submitted=false;</script>
+    
+    
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"      
+            onload="if(submitted) {window.location='index.html';}"> </iframe> 
+
+    <form action="https://docs.google.com/forms/d/1WX5wmsxqoMguWmm4EVLpALQ_9JYWmYJ9q4OUlvX5jIg/formResponse" method="POST">
+      <input type="text" name="entry.2140303741" placeholder="Name">
+       <input type="phonenumber" name="entry.1876726506" placeholder="Phone Number">
+       <input type="email" name="entry.604285046" placeholder="Email">
+       <input type="number" name="entry.1322490766" placeholder="Class">
+       <input type="text" name="entry.770259313" placeholder="School Name">
+       <button type= submit style="background: black">Submit</button>
+    </form>
+    </div>
+
+
     
 </body>
 </html>

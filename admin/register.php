@@ -1,8 +1,12 @@
 <?php
-include('security.php');
-include('includes/header.php');
+include('includes/header.php'); 
 include('includes/navbar.php'); 
+
 ?>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 <div class="modal fade" id="addadminprofile" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -23,8 +27,7 @@ include('includes/navbar.php');
             </div>
             <div class="form-group">
                 <label>Email</label>
-                <input type="email" name="email" class="form-control checking_email" placeholder="Enter Email">
-                <small class="error_email" style="color: red;"></small>
+                <input type="email" name="email" class="form-control" placeholder="Enter Email">
             </div>
             <div class="form-group">
                 <label>Password</label>
@@ -34,8 +37,7 @@ include('includes/navbar.php');
                 <label>Confirm Password</label>
                 <input type="password" name="confirmpassword" class="form-control" placeholder="Confirm Password">
             </div>
-
-
+        
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -47,6 +49,66 @@ include('includes/navbar.php');
   </div>
 </div>
 
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addadminprofile">
-       Add Admin Profile 
-</button>
+
+<div class="container-fluid">
+
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+  <div class="card-header py-3">
+    <h6 class="m-0 font-weight-bold text-primary">Admin Profile 
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addadminprofile">
+              Add Admin Profile 
+            </button>
+    </h6>
+  </div>
+
+  <div class="card-body">
+
+    <div class="table-responsive">
+
+      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+          <tr>
+            <th> ID </th>
+            <th> Username </th>
+            <th>Email </th>
+            <th>Password</th>
+            <th>EDIT </th>
+            <th>DELETE </th>
+          </tr>
+        </thead>
+        <tbody>
+     
+          <tr>
+            <td> 1 </td>
+            <td> Funda of WEb IT</td>
+            <td> funda@example.com</td>
+            <td> *** </td>
+            <td>
+                <form action="" method="post">
+                    <input type="hidden" name="edit_id" value="">
+                    <button  type="submit" name="edit_btn" class="btn btn-success"> EDIT</button>
+                </form>
+            </td>
+            <td>
+                <form action="" method="post">
+                  <input type="hidden" name="delete_id" value="">
+                  <button type="submit" name="delete_btn" class="btn btn-danger"> DELETE</button>
+                </form>
+            </td>
+          </tr>
+        
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</div>
+
+</div>
+<!-- /.container-fluid -->
+
+<?php
+include('includes/scripts.php');
+include('includes/footer.php');
+?>

@@ -1,6 +1,27 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <script>
+            <script>
+        window.onload = function() {
+  let innerDiv = document.getElementsByClassName("inner-description");
+  let clicked = document.querySelectorAll('.show-hide-description');
+  clicked.forEach((item, i) => {
+    let clickedId = item.id;
+    document.querySelector(`#${clickedId}`).addEventListener('click',()=>{
+      let clickedIdDescription = document.getElementById(`${clickedId}-description`);
+      if(clickedIdDescription.classList.contains('show')){
+        showHideAll(innerDiv)
+      } else {
+        showHideAll(innerDiv)
+        clickedIdDescription.classList.remove('hide');
+        clickedIdDescription.classList.add('show');
+      }
+    })
+  });
+}
+        </script>
+    </script>
     <style>
         body{
             background: url('https://cdn.wallpapersafari.com/47/33/Wb06Ol.jpg');
@@ -19,7 +40,7 @@
     <title>Quiz</title>
 </head>
 <body>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScqHRuKyj1h7n5ZOk3NEOq8TYYmeq0uCRN_ESAzc9gHXFdIlA/viewform?embedded=true" width="100%" height="750px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScAXzDGwduXHgt8C1ALxI8CoL6NzsOTsTmjrgli2KEga4c1bg/viewform?embedded=true" width="100%" height="750px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
 </body>
 </html>
